@@ -64,7 +64,7 @@ def app():
         (.venv) C:\\Users\\Python-Projects
         ```
     """)
-    st.markdown("5. Go back to your main directory or the folder you created to store the app's files, then run \"pip install\"")
+    st.markdown("5. Go back to your main directory or the folder you created to store the app's files, then run \"pip install -r requirements.txt\"")
     st.markdown("""
         ```bash 
         pip install -r requirements.txt
