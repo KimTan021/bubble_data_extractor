@@ -14,7 +14,9 @@ def app():
     manage_states()
 
     st.markdown("##### Overview")
-    st.write("This Bubble Data Extractor is a robust tool designed to streamline the process of retrieving and exporting data from a Bubble application database. Utilizing Streamlit and Python, this app offers an intuitive interface for users to fetch data by dynamically generating API URL endpoints based on user-specified constraints. This allows for precise and efficient data retrieval tailored to specific needs.")
+    st.markdown("""
+        <p style="text-align: justify;">This Bubble Data Extractor is a robust tool designed to streamline the process of retrieving and exporting data from a Bubble application database. Utilizing Streamlit and Python, this app offers an intuitive interface for users to fetch data by dynamically generating API URL endpoints based on user-specified constraints. This allows for precise and efficient data retrieval tailored to specific needs.</p>
+    """, unsafe_allow_html=True)
     
     st.markdown("##### Enter an endpoint to get started")
     endpoint = st.text_input("Enter an endpoint (e.g., https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type)")

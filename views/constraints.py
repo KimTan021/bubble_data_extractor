@@ -5,7 +5,9 @@ import pandas as pd
 def app():
     st.markdown("# Constraints 🚧")
     st.markdown("##### Overview")
-    st.markdown("Constraints in Bubble's Data API allow users to filter data based on specific criteria. By applying constraints, you can retrieve only the data that matches your requirements. Constraints are specified in the API request URL and can be combined to form complex queries.")
+    st.markdown("""
+        <p style="text-align: justify;">Constraints in Bubble's Data API allow users to filter data based on specific criteria. By applying constraints, you can retrieve only the data that matches your requirements. Constraints are specified in the API request URL and can be combined to form complex queries.</p>
+    """, unsafe_allow_html=True)
 
     # Create a table using streamlit
     data = {

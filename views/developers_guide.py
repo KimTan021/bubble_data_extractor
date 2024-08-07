@@ -11,7 +11,9 @@ def app():
     
     st.write("\n")
     st.markdown("##### How to Run the App Locally")
-    st.markdown("**Note:** In this guide, I will use VS Code as my code editor and the set-up for other editors might be different from this. I prefer you to use the same editor as I have, but if you know how to set-up the Python environment for your editor of choice, then you can freely do that.")
+    st.markdown("""
+        <p style="text-align: justify;"><strong>Note:</strong> In this guide, I will use VS Code as my code editor and the set-up for other editors might be different from this. I prefer you to use the same editor as I have, but if you know how to set-up the Python environment for your editor of choice, then you can freely do that.</p>
+    """, unsafe_allow_html=True)
     st.markdown("1. Choose the location where you want to store the app. You can do this by changing directory (cd) to your command line to locate where you want to put the app's files.")
     st.markdown("- **Sample:**")
     st.markdown("""
