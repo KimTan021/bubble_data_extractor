@@ -72,9 +72,20 @@ def app():
     
     st.markdown("""
         <ul>
-            <li><strong>Documentation</strong>
+            <li><strong>Users Guide</strong>
                 <ul>
-                    <li style="text-align: justify;">The <strong>Documentation</strong> page provides comprehensive information about the Bubble Data Extractor, including detailed instructions on how to use the app, technical specifications, and examples. This page serves as a reference for users to understand the app’s features, usage procedures, and configuration requirements. It includes sections on how to enter API URLs, apply constraints, and export data, ensuring users can effectively utilize the app's functionalities.</li>
+                    <li style="text-align: justify;">The <strong>Users Guide</strong> page is a comprehensive manual designed to help end-users effectively navigate and utilize the Data Fetcher and Exporter App. It provides detailed step-by-step instructions on how to perform various tasks, such as entering the API URL, applying constraints, and exporting data. The guide also includes troubleshooting tips and common use cases to ensure users can make the most out of the app’s features with ease and confidence.</li>
+                </ul>
+            </li>
+        </ul>
+    """, unsafe_allow_html=True)
+    
+    
+    st.markdown("""
+        <ul>
+            <li><strong>Developers Guide</strong>
+                <ul>
+                    <li style="text-align: justify;">The <strong>Developers Guide</strong> page provides detailed instructions on how to run the Data Fetcher and Exporter App locally. This guide includes step-by-step setup instructions to help developers get the app up and running on their local machines. It covers prerequisites, installation of necessary libraries, configuration of environment variables, and execution of the app. The guide ensures that developers can easily set up the app in their local environment for development and testing purposes.</li>
                 </ul>
             </li>
         </ul>
