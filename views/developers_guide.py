@@ -27,7 +27,7 @@ def app():
         mkdir [folder name]
         ```
     """)
-    st.markdown("2. After that, you can now clone the app in the remote repository on github (https://github.com/KimTan021/bubble_data_extractor.git) and type the command in the image on the terminal.")
+    st.markdown("2. After that, you can now clone the app in the remote repository on github (https://github.com/KimTan021/bubble_data_extractor.git) and run the command below in the terminal.")
     st.markdown("""
         ```bash 
         git clone https://github.com/KimTan021/bubble_data_extractor.git
@@ -66,7 +66,7 @@ def app():
         (.venv) C:\\Users\\Python-Projects
         ```
     """)
-    st.markdown("5. Go back to your main directory or the folder you created to store the app's files, then run \"pip install -r requirements.txt\"")
+    st.markdown("5. Go back to your main directory or the folder you created to store the app's files, then run the command below.")
     st.markdown("""
         ```bash 
         pip install -r requirements.txt
