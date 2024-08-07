@@ -1,19 +1,21 @@
 import streamlit as st
 import fetch_and_export
-from views import documentation, constraints, limitations, about
+from views import users_guide, developers_guide, constraints, limitations, about
 
-st.set_page_config(page_title="Data Fetching and Exporting")
+st.set_page_config(page_title="Bubble Data Extractor", page_icon="🚀")
 st.title("🚀 Bubble Data Extractor")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Fetch Data", "Documentation", "Constraints", "Limitations", "About"])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Fetch Data", "Users Guide", "Developers Guide", "Constraints", "Limitations", "About"])
 
 with tab1:
     fetch_and_export.app()
 with tab2:
-    documentation.app()
+    users_guide.app()
 with tab3:
-    constraints.app()
+    developers_guide.app()
 with tab4:
-    limitations.app()
+    constraints.app()
 with tab5:
+    limitations.app()
+with tab6:
     about.app()
