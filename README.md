@@ -82,7 +82,7 @@ cd Users/SPM/Desktop/Kim-Intern/
 ```bash
 mkdir [folder name]
 ```
-2. After that, you can now clone the app in the remote repository on github (https://github.com/KimTan021/spm_api) and type the command in the image on the terminal.
+2. After that, you can now clone the app in the remote repository on github (https://github.com/KimTan021/spm_api) and run the command below in the terminal.
 ```bash
 git clone https://github.com/KimTan021/bubble_data_extractor.git
 ```
@@ -110,7 +110,7 @@ activate
 ```bash
 (.venv) C:\Users\Python-Projects
 ```
-5. Go back to your main directory or the folder you created to store the app's files, then run "pip install -r requirements.txt"
+5. Go back to your main directory or the folder you created to store the app's files, then run the command below.
 ```bash
 pip install -r requirements.txt
 ```
