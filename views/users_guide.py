@@ -3,11 +3,7 @@ import streamlit as st
 
 def app():
     st.markdown("# Users Guide 📖")
-
-    st.markdown("**App Name:** Bubble Data Extractor")
-    st.markdown(
-        "**Developer:** Kim Emerson M. Tan (Backend Developer Intern PITX)")
-
+    
     st.write("\n")
     st.markdown("#### ✅ Requirements")
     st.markdown(
