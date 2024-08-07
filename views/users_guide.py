@@ -31,11 +31,21 @@ def app():
 
     st.markdown("""
         <ul>
-            <li><strong>Things to note for when filtering by date:</strong>
+            <li><strong>Things to note when filtering by date:</strong>
                 <ul>
                     <li style="text-align: justify;">If you filter by date, the value will change to a date input, and you need to select the date you want to filter your data by. For the date that you selected, for example, 8/7/2024, its hours, minutes, and seconds will all be 0. Basically, it is the very first start of the day.</li>
                     <li style="text-align: justify;">So if you want to filter the data within a specific date range, you need to use "greater than" and "less than" as your constraint types. Basically, you filter by two columns with the same name (e.g., Created Date) to filter the data with a specific date range.</li>
                     <li style="text-align: justify;">For example, if you want to filter data from January 1, 2024, to May 31, 2024, you will first add a column, such as "Created Date." Select "greater than" as the constraint type and input January 1, 2024. Next, add another column, choose "less than" as the constraint type, and input June 1, 2024, instead of May 31, 2024. This is because the time for the date will default to 0, so inputting June 1 ensures that data for May 31 is included. Essentially, inputting the day after your end date covers all data up to and including May 31.</li>
+                </ul>
+            </li>
+        </ul>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+        <ul>
+            <li><strong>Things to note when filtering by number:</strong>
+                <ul>
+                    <li style="text-align: justify;">When writing a number as a value, don't use a comma (,) to separate digits. This is to avoid not filtering the data you want, just use the normal format of a number without any commas.</li>
                 </ul>
             </li>
         </ul>
