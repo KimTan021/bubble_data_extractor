@@ -4,12 +4,22 @@ import streamlit as st
 from io import BytesIO
 from dateutil.parser import parse
 import re
-from datetime import datetime
-import sys
-import io
 
 @st.cache_data
 def fetch_data(endpoint):
+    """
+    Fetches data from the specified API endpoint.
+
+    Parameters:
+    endpoint (str): The URL endpoint to fetch data from.
+
+    Returns:
+    list: A list of fetched data.
+
+    Raises:
+    None
+
+    """
     base_url = f"{endpoint}"
     base_url = requests.utils.requote_uri(base_url)
     all_data = []
@@ -37,6 +47,16 @@ def fetch_data(endpoint):
 
 @st.cache_data
 def get_columns(endpoint):
+    """
+    Retrieves the column names and data types from a Bubble Data API endpoint.
+
+    Args:
+        endpoint (str): The URL of the Bubble Data API endpoint.
+
+    Returns:
+        dict: A dictionary mapping column names to their corresponding data types.
+              If the URL is not a valid Bubble Data API endpoint, returns None.
+    """
     base_url = f"{endpoint}"
     base_url = requests.utils.requote_uri(base_url)
     
@@ -76,6 +96,20 @@ def get_columns(endpoint):
     
     
 def convert_to_excel(data):
+    """
+    Converts a given data into an Excel file and returns the file as a BytesIO object.
+
+    Parameters:
+    - data: The data to be converted into Excel format.
+
+    Returns:
+    - output: A BytesIO object containing the Excel file.
+
+    Example usage:
+    data = [['Name', 'Age'], ['John', 25], ['Jane', 30]]
+    excel_file = convert_to_excel(data)
+    """
+
     df = pd.DataFrame(data)
     output = BytesIO()
     with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
@@ -92,6 +126,16 @@ def convert_to_excel(data):
     return output
 
 def get_constraints(data_type):
+    """
+    Returns a list of constraints based on the given data type.
+
+    Parameters:
+    - data_type (str): The data type for which constraints are needed.
+
+    Returns:
+    - constraints (list): A list of constraints based on the given data type.
+    """
+
     all_field_types = ["equals", "not equal", "is_empty", "is_not_empty", "in", "not in"]
     text_fields_types = ["text contains", "not text contains"]
     text_number_date_types = ["greater than", "less than"]
@@ -108,12 +152,27 @@ def get_constraints(data_type):
         return every_single_field_types
     
 def requires_value(constraint):
+    """
+    Checks if a constraint requires a value.
+
+    Args:
+        constraint (str): The constraint to check.
+
+    Returns:
+        bool: True if the constraint requires a value, False otherwise.
+    """
     no_value_constraints = ["is_empty", "is_not_empty", "empty", "not empty"]
     return constraint not in no_value_constraints
 
 def popFilter(index):
-    # print(f"Debug: {st.session_state.filters}")
+    """
+    Removes a filter from the list of filters in the session state.
+
+    Parameters:
+        index (int): The index of the filter to be removed.
+
+    Returns:
+        None
+    """
     st.session_state.filters.pop(index)
     st.session_state.filtering_done = False
-    # st.rerun()
-    # print(f"After: {st.session_state.filters}")
