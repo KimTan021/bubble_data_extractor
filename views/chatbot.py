@@ -30,8 +30,8 @@ def app():
     user_query = st.text_input("Ask a question:")
 
     if user_query:
-
-        response, source_nodes = get_response_from_chatbot(user_query)
+        with st.spinner('Generating response...'):
+            response, source_nodes = get_response_from_chatbot(user_query)
         # Display the user query and response in chat format
         message(user_query, is_user=True)
         message(response, is_user=False)
