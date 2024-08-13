@@ -122,6 +122,34 @@ streamlit run app.py
 7. The app will open to your default web browser.
 ![Bubble Data Extractor](images/bubble_data_extractor.png)
 
+# Constraints 🚧
+### Overview
+Constraints in Bubble's Data API allow users to filter data based on specific criteria. By applying constraints, you can retrieve only the data that matches your requirements. Constraints are specified in the API request URL and can be combined to form complex queries.
+
+### Constraint Types
+Constraint Type | Description | Field Types
+--- | --- | ---
+equals or not equal | Use to test strict equality | All field types
+is_empty or is_not_empty | Use to test whether a thing's given field is empty or not | All field types
+text contains or not text contains | Use to test whether a text field contains a string. Text contains will not respect partial words that are not of the same stem. | Text fields only
+greater than or less than	| Use to compare a thing's field value relative to a given value | Text, number, and date fields
+in or not in | Use to test whether a thing's field is in a list or not for all field types. | All field types
+contains or not contains | Use to test whether a list field contains an entry or not for list fields only. | List fields only
+empty or not empty | Use to test whether a list field is empty or not for list fields only. | List fields only
+
+For more information on constraints, please refer to the [Bubble API documentation](https://manual.bubble.io/).
+
+# Limitations ⚠️
+### Overview
+Bubble is a powerful no-code platform that enables users to build complex web applications without traditional programming. However, despite its many strengths, there are certain limitations to consider when using Bubble.
+
+### Limitations
+- There is a limit of 50,000 items in any GET request, meaning that if a database contains 100,000 items and the cursor is set at 50,001 no results will be returned.
+- For the Enterprise plan the limit is 10,000,000 items.
+- The URL endpoint you will use in the app to extract data is limited to Bubble's Data API endpoints. The main reason for this limitation is that different API calls have their own methods of sending data, specifically the JSON data they transmit. As a result, the code is designed to accept data formatted according to how Bubble sends their data using their API.
+
+For more information on limitations, please refer to the [Bubble API documentation](https://manual.bubble.io/).
+
 ### 📧 Contact Developer
 **Developer:** Kim Emerson M. Tan
 
