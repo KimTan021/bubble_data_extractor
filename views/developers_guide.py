@@ -82,3 +82,6 @@ def app():
     st.markdown("7. The app will open to your default web browser.")
     st.image("images/bubble_data_extractor.png")
     
+    st.write("\n")
+    st.markdown("##### If you have questions, you can go to the \"Chatbot\" tab, and the bubble chatbot would be happy to help you.")
+    

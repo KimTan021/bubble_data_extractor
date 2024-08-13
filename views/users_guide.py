@@ -71,3 +71,5 @@ def app():
     """, unsafe_allow_html=True)
     st.image("images/final_url.png")
     
+    
+    st.markdown("##### If you have questions, you can go to the \"Chatbot\" tab, and the bubble chatbot would be happy to help you.")
