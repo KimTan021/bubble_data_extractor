@@ -20,11 +20,16 @@ def load_model():
 def app():
     @st.cache_data
     def get_response_from_chatbot(user_query):
-        
-        query_engine = load_model()
+        try:
+            query_engine = load_model()
+            if query_engine is None:
+                raise ValueError("Model loading failed")
 
-        # Get response from the model
-        response = query_engine.query(user_query)
+            # Get response from the model
+            response = query_engine.query(user_query)
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
+            return
         
         return response.response, response.source_nodes
 
