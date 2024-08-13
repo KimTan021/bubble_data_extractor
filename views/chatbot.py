@@ -24,7 +24,7 @@ def app():
         return response.response, response.source_nodes
 
     # Streamlit app
-    st.title("Bubble Chatbot 🤖")
+    st.title("🤖 Hi There!")
 
     # Input text box for user query
     user_query = st.text_input("Ask a question:")
