@@ -5,17 +5,19 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import streamlit as st
 from streamlit_chat import message
 
+
 @st.cache_resource
 def load_model():
-        llm = Groq(model="llama3-70b-8192", api_key=st.secrets["API_KEY"])
-        embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
-        Settings.llm = llm
-        Settings.embed_model = embed_model
-        documents = SimpleDirectoryReader(input_files=['README.md'], ).load_data()
-        index = VectorStoreIndex.from_documents(documents)
-        query_engine = index.as_query_engine()
-        
-        return query_engine
+    llm = Groq(model="llama3-70b-8192", api_key=st.secrets["API_KEY"])
+    embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+    Settings.llm = llm
+    Settings.embed_model = embed_model
+    documents = SimpleDirectoryReader(input_files=['README.md'], ).load_data()
+    index = VectorStoreIndex.from_documents(documents)
+    query_engine = index.as_query_engine()
+
+    return query_engine
+
 
 def app():
     @st.cache_data
@@ -30,7 +32,7 @@ def app():
         except Exception as e:
             st.error(f"An error occurred: {e}")
             return
-        
+
         return response.response, response.source_nodes
 
     st.title("🤖 Hi There!")
