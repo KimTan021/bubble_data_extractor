@@ -4,8 +4,11 @@ from llama_index.llms.groq import Groq
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import streamlit as st
 from streamlit_chat import message
+import requests
+from bs4 import BeautifulSoup
 
 def app():
+    @st.cache_data
     def get_response_from_chatbot(user_query):
         llm = Groq(model="llama3-70b-8192", api_key=st.secrets["API_KEY"])
         embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
