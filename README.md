@@ -44,9 +44,9 @@ To get started using the app, you first need to access it via this web address: 
 ### Fetching data from the app
 1. After accessing the website, you need to put a valid Bubble Data API endpoint (e.g., https://[app name].bubbleapps.io/api/1.1/obj/[data type/data table]) in the text input shown in the image.
 
-- **Live Testing:** https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type
+- **URL Endpoint for Live Testing:** https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type
 
-- **Local Testing:** https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type
+- **URL Endpoint for Local Testing:** https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type
 
 ![Getting Started](images/getting_started.png)
 3. After that, you can filter data by clicking the "Add Column to Filter" button, specifying the column you want to filter, the constraint type, and, if necessary, the value you need to filter the column by. If you're done filtering, just click the "Filtering Done" button below. For more information on constraint types, go to the Constraints tab of the app.
