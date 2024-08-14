@@ -44,6 +44,8 @@ To get started using the app, you first need to access it via this web address: 
 ### Fetching data from the app
 1. After accessing the website, you need to put a valid Bubble Data API endpoint (e.g., https://[app name].bubbleapps.io/api/1.1/obj/[data type/data table]) in the text input shown in the image.
 
+The URL to be used for live testing is https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type
+The URL to be used for local testing is https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type
 - **URL Endpoint for Live Testing:** https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type
 
 - **URL Endpoint for Local Testing:** https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type
