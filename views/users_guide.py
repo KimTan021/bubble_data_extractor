@@ -28,6 +28,8 @@ def app():
     st.markdown("""
         <p style="text-align: justify;">1. After accessing the website, you need to put a valid Bubble Data API endpoint (e.g., https://[app name].bubbleapps.io/api/1.1/obj/[data type/data table]) in the text input shown in the image.</p>
     """, unsafe_allow_html=True)
+    st.markdown("**Live Testing:** https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type")
+    st.markdown("**Local Testing:** https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type")
     st.image("images/getting_started.png")
     st.markdown("""
         <p style="text-align: justify;">2. After that, you can filter data by clicking the \"Add Column to Filter\" button, specifying the column you want to filter, the constraint type, and, if necessary, the value you need to filter the column by. If you're done filtering, just click the \"Filtering Done\" button below. For more information on constraint types, go to the **Constraints** tab of the app.</p>

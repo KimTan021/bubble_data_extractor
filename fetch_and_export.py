@@ -19,7 +19,9 @@ def app():
     """, unsafe_allow_html=True)
     
     st.markdown("##### Enter an endpoint to get started")
-    endpoint = st.text_input("Enter an endpoint (e.g., https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type)")
+    st.markdown("**For Live Testing:** https://your-app-name.bubbleapps.io/api/1.1/obj/your-data-type")
+    st.markdown("**For Local Testing:** https://your-app-name.bubbleapps.io/version-test/api/1.1/obj/your-data-type")
+    endpoint = st.text_input("Enter an endpoint")
 
     if endpoint != st.session_state.prev_endpoint:
         # Clear session state variables to trigger rerun
