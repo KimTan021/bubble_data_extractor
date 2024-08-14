@@ -7,6 +7,16 @@ def check_password():
     """Returns `True` if the user had a correct password."""
 
     def login_form():
+        """
+        Renders the login form for the Bubble Data Extractor application.
+
+        This function displays a login form using Streamlit's `st.form` API.
+        Users are prompted to enter their username and password to log in.
+        Upon submitting the form, the `password_entered` function is called.
+
+        Returns:
+            None
+        """
         st.title("🚀 Bubble Data Extractor")
         st.markdown("#### About the App")
 
